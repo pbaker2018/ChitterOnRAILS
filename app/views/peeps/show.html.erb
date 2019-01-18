@@ -1,0 +1,17 @@
+<div class="container">
+<div align="center">
+  <h1>Here is your selected peep:</h1>
+  <br/>
+  <h4>"<%= @peep.content %>"</h4>
+  <br/>
+  <br/>
+  <%= button_to "Update Peep", { :action => "edit" }, :method => :get %><br/>
+  <br/>
+  <%= button_to "Delete Peep", { action: "destroy", id: @peep.id },
+                              method: :delete, data: { confirm: "Are you sure?" } %>
+  <br/>
+  <%= button_to "Homepage", { :action => "index" }, :method => :get %><br/>
+  <br/>
+  <br/>
+</div>
+</div>

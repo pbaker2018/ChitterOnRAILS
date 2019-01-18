@@ -1,0 +1,26 @@
+<div class="container">
+  <div align="center">
+    <h1>Welcome to Pauline's Chitter App 💌</h1>
+    <br/>
+    <h3>⬇︎ Type a new 'peep' here ⬇︎</h3>
+    <%= form_tag("/peeps", method: "post") do %>
+    <%= text_area_tag(:content, "", placeholder: "Please type your peep here  ✍🏼", size: "60x10") %><br/>
+    <br/>
+    <%= text_field_tag(:name, "", placeholder: "Please type your name here  ✍🏼", size: 40) %><br/>
+    <br/>
+    <%= submit_tag("Submit") %>
+    <% end %><br/>
+    <br/>
+    <h2>⬇︎ Here are your previously submitted peeps ⬇︎</h2>
+    <% @peeps.reverse.each do |peep| %>
+    <div>
+      <p><b>Created:</b> <%= peep.created_at.strftime("%d-%m-%Y %H:%M:%S") %> | <b>Posted by:</b> <%= peep.name %><br/>
+        <a href="/peeps/<%= peep.id %>"> <%= peep.content[0, 25] %> </a> <br/>
+        <%= button_to "Delete Peep", { action: "destroy", id: peep.id },
+        method: :delete, data: { confirm: "Are you sure?" } %>
+        <br/>
+      </div>
+      <% end %>
+    </div>
+
+  </div>

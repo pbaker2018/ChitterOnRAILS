@@ -1,0 +1,16 @@
+<div class="container">
+  <div align="center">
+    <h1>Please update your peep:</h1>
+    <br/>
+    <%= form_tag("/peeps", method: "post") do %>
+    <%= text_area_tag(:content, @peep.content, size: "60x10") %><br/>
+    <br/>
+    <%= text_field_tag(:name, @peep.name, size: 40) %><br/>
+    <br/>
+    <%= button_to "Update Peep", { action: "update", id: @peep.id },
+    data: { confirm: "Are you sure you want to update this peep?" } %>
+    <% end %>
+    <br/>
+    <%= button_to "Homepage", { :action => "index" }, :method => :get %><br/>
+  </div>
+</div>
