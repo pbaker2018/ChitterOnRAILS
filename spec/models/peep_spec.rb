@@ -1,15 +1,8 @@
-# frozen_string_literal: true
+require 'rails_helper'
+require 'spec_helper'
+require 'timecop'
 
-require 'test_helper'
-
-class PeepTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
-  require 'peep'
-  require 'timecop'
-
-  RSpec.describe Peep do
+RSpec.describe Peep do
     before do
       Timecop.freeze(Time.now)
     end
@@ -40,4 +33,3 @@ class PeepTest < ActiveSupport::TestCase
       end
     end
   end
-end
