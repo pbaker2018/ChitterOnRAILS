@@ -8,7 +8,7 @@
   <%= button_to "Update Peep", { :action => "edit" }, :method => :get %><br/>
   <br/>
   <%= button_to "Delete Peep", { action: "destroy", id: @peep.id },
-                              method: :delete, data: { confirm: "Are you sure?" } %>
+                              method: :delete, data: { confirm: "Are you sure you want to delete this peep?" } %>
   <br/>
   <%= button_to "Homepage", { :action => "index" }, :method => :get %><br/>
   <br/>

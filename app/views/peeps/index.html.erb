@@ -17,7 +17,7 @@
       <p><b>Created:</b> <%= peep.created_at.strftime("%d-%m-%Y %H:%M:%S") %> | <b>Posted by:</b> <%= peep.name %><br/>
         <a href="/peeps/<%= peep.id %>"> <%= peep.content[0, 25] %> </a> <br/>
         <%= button_to "Delete Peep", { action: "destroy", id: peep.id },
-        method: :delete, data: { confirm: "Are you sure?" } %>
+        method: :delete, data: { confirm: "Are you sure you want to delete this peep?" } %>
         <br/>
       </div>
       <% end %>
