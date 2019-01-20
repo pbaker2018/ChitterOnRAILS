@@ -15,10 +15,6 @@ feature 'visit user homepage' do
   end
 
   scenario 'will display a form to post peeps' do
-    # visit '/'
-    # fill_in :user_email, with: 'test@gmail.com'
-    # fill_in :user_password, with: 'password'
-    # click_button 'Log in'
     visit '/'
     click_link('Sign up')
     fill_in :user_email, with: 'test@gmail.com'
