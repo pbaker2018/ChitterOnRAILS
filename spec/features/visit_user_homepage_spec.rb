@@ -3,21 +3,11 @@ require 'spec_helper'
 require 'timecop'
 
 feature 'visit user homepage' do
-  scenario 'will display a header' do
-    visit '/'
-    click_link('Sign up')
-    fill_in :user_email, with: 'test@gmail.com'
-    fill_in :user_password, with: 'password'
-    fill_in :user_password_confirmation, with: 'password'
-    click_button 'Sign up'
-    expect(page).to have_content("Welcome to Pauline's Chitter App")
-    expect(page).to have_content('Here are your previously submitted peeps')
-  end
-
   scenario 'will display a form to post peeps' do
     visit '/'
     click_link('Sign up')
-    fill_in :user_email, with: 'test@gmail.com'
+    fill_in :user_email, with: 'test@example.com'
+    fill_in :user_user_name, with: 'Name'
     fill_in :user_password, with: 'password'
     fill_in :user_password_confirmation, with: 'password'
     click_button 'Sign up'
@@ -28,15 +18,15 @@ feature 'visit user homepage' do
   scenario 'will display submitted message' do
     visit '/'
     click_link('Sign up')
-    fill_in :user_email, with: 'test@gmail.com'
+    fill_in :user_email, with: 'test@example.com'
+    fill_in :user_user_name, with: 'Name'
     fill_in :user_password, with: 'password'
     fill_in :user_password_confirmation, with: 'password'
     click_button 'Sign up'
     fill_in :content, with: 'Test Message!'
-    fill_in :name, with: 'Test Name'
     click_button 'Submit'
     expect(page).to have_content('Test Message')
-    expect(page).to have_content('Posted by: Test Name')
+    expect(page).to have_content('Posted by: Name')
     expect(page).to have_content(Time.now.strftime('%d-%m-%Y %H:%M:%S'))
   end
 
@@ -44,21 +34,22 @@ feature 'visit user homepage' do
     visit '/'
     click_link('Sign up')
     fill_in :user_email, with: 'test@gmail.com'
+    fill_in :user_user_name, with: 'Name'
     fill_in :user_password, with: 'password'
     fill_in :user_password_confirmation, with: 'password'
     click_button 'Sign up'
     fill_in :content, with: 'Test Message!'
-    fill_in :name, with: 'Test Name'
     click_button 'Submit'
     click_button 'Delete Peep'
     expect(page).not_to have_content('Test Message!')
-    expect(page).not_to have_content('Posted by: Test Name')
+    expect(page).not_to have_content('Posted by: Name')
   end
 
   scenario 'will allow user to logout from the user homepage' do
     visit '/'
     click_link('Sign up')
     fill_in :user_email, with: 'test@gmail.com'
+    fill_in :user_user_name, with: 'Name'
     fill_in :user_password, with: 'password'
     fill_in :user_password_confirmation, with: 'password'
     click_button 'Sign up'

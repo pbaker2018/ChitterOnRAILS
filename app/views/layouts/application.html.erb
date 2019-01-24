@@ -15,8 +15,7 @@
     <% else %>
       <li> <%= link_to("Log in", new_user_session_path)%> </li>
     <% end %>
+    <%= render "flashes" %>
     <%= yield %>
-    <p class="notice"><%= notice %></p>
-   <p class="alert"><%= alert %></p>
   </body>
 </html>

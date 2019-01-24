@@ -4,15 +4,15 @@ This is a weekend challenge given at the end of Week 5 at Makers.
 
 The task is to complete a very basic clone of Twitter, called 'Chitter' where users can post messages 'peeps.'
 
-This is to be built using Ruby, Rails and the ActiveRecord ORM.
+This is to be built using Ruby, Rails and the ActiveRecord ORM. The 'Devise' gem is used for User Authentication.
 
-It is my first time using Rails.
+It is my first time using both Rails and Devise.
 
 ## What does it do:
 
 A user should be able to go to the homepage, where they will be able to view a preview of all previously submitted 'peeps' and then post a new 'peep'.
 
-If they click on a previously submitted 'peep' they will be able to view the whole 'peep' and will have the option of editing it, or deleting it.
+If they click on a previously submitted 'peep' they will be able to view the whole 'peep' and will have the option of editing it, or deleting it. However, they can only edit or delete their own peeps.
 
 There will also be 'sign-up', 'sign-in' and 'log-out' functionality, so that only the logged-in user can post messages as themselves.
 

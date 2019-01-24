@@ -14,10 +14,11 @@ feature "visit homepage" do
     expect(page).to have_button("Log in")
   end
 
-  scenario 'will allow a user to sign-up' do
+  scenario 'will allow a new user to sign-up' do
     visit '/'
     click_link('Sign up')
-    fill_in :user_email, with: 'test@gmail.com'
+    fill_in :user_email, with: 'test@example.com'
+    fill_in :user_user_name, with: 'Name'
     fill_in :user_password, with: 'password'
     fill_in :user_password_confirmation, with: 'password'
     click_button 'Sign up'
@@ -28,12 +29,13 @@ feature "visit homepage" do
   scenario 'will allow a signed-up user to log-in' do
     visit '/'
     click_link('Sign up')
-    fill_in :user_email, with: 'test@gmail.com'
+    fill_in :user_email, with: 'test@example.com'
+    fill_in :user_user_name, with: 'Name'
     fill_in :user_password, with: 'password'
     fill_in :user_password_confirmation, with: 'password'
     click_button 'Sign up'
     click_link('Logout')
-    fill_in :user_email, with: 'test@gmail.com'
+    fill_in :user_email, with: 'test@example.com'
     fill_in :user_password, with: 'password'
     click_button 'Log in'
     expect(page).to have_content("Welcome to Pauline's Chitter App")
