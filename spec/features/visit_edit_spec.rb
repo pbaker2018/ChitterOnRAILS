@@ -55,7 +55,7 @@ feature 'visit edit page' do
     #   click_button 'Update Peep'
     #   fill_in :content, with: 'UPDATED Test Message!'
     #   click_button 'Update Peep'
-    #   expect(page).to have_content("Welcome to Pauline's Chitter App")
+    #   expect(page).to have_content("Welcome to Pauline's Chitter App, Name")
     #   expect(page).to have_content("UPDATED Test Message!")
     # end
 end
