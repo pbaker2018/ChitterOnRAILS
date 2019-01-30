@@ -41,21 +41,21 @@ feature 'visit edit page' do
     expect(page).to have_content("Welcome to Pauline's Chitter App, Name")
   end
 
-    # scenario 'will allow user to update their selected peep' do
-    #   visit '/'
-    #   click_link('Sign up')
-    #   fill_in :user_email, with: 'test@example.com'
-    #   fill_in :user_user_name, with: 'Name'
-    #   fill_in :user_password, with: 'password'
-    #   fill_in :user_password_confirmation, with: 'password'
-    #   click_button 'Sign up'
-    #   fill_in :content, with: 'Test Message!'
-    #   click_button 'Submit'
-    #   click_link('Test Message!')
-    #   click_button 'Update Peep'
-    #   fill_in :content, with: 'UPDATED Test Message!'
-    #   click_button 'Update Peep'
-    #   expect(page).to have_content("Welcome to Pauline's Chitter App, Name")
-    #   expect(page).to have_content("UPDATED Test Message!")
-    # end
+    scenario 'will allow user to update their selected peep' do
+      visit '/'
+      click_link('Sign up')
+      fill_in :user_email, with: 'test@example.com'
+      fill_in :user_user_name, with: 'Name'
+      fill_in :user_password, with: 'password'
+      fill_in :user_password_confirmation, with: 'password'
+      click_button 'Sign up'
+      fill_in :content, with: 'Test Message!'
+      click_button 'Submit'
+      click_link('Test Message!')
+      click_button 'Update Peep'
+      fill_in :peep_content, with: 'UPDATED Test Message!'
+      click_button 'Update Peep'
+      expect(page).to have_content("Welcome to Pauline's Chitter App, Name")
+      expect(page).to have_content("UPDATED Test Message!")
+    end
 end

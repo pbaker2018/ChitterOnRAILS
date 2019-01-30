@@ -2,11 +2,9 @@
   <div align="center">
     <h1>Please update your peep, <%= current_user.user_name %>:</h1>
     <br/>
-    <%= form_tag("/peeps/#{@peep.id}", method: "put") do %>
-      <%= text_area_tag(:content, @peep.content, size: "60x10") %><br/>
-      <br/>
-      <%= button_to "Update Peep", { action: "update", id: @peep.id },
-      data: { confirm: "Are you sure you want to update this peep?" } %>
+   <%= form_for @peep do |f| %>
+   <%= f.text_area :content, size: "60x10" %><br/>
+   <%= f.submit data: { confirm: "Are you sure you want to update this peep?" } %>
    <% end %>
     <br/>
     <%= button_to "Homepage", { :action => "index" }, :method => :get %><br/>

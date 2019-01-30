@@ -8,7 +8,7 @@ class PeepsController < ApplicationController
   end
 
   def create
-    current_user.peeps.create(content: params[:content], name: params[:name])
+    current_user.peeps.create(content: params[:content])
     redirect_to action: 'index'
   end
 
@@ -22,7 +22,7 @@ class PeepsController < ApplicationController
 
   def update
     @peep = current_user.peeps.find(params[:id])
-    if @peep.update(content: params[:content])
+    if @peep.update(content: params[:peep][:content])
       flash[:notice] = 'Successfully updated peep!'
       redirect_to action: 'index'
     end
