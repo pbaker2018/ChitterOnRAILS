@@ -38,7 +38,7 @@ feature 'visit edit page' do
     click_link('My test message!')
     click_button 'Update Peep'
     click_button 'Homepage'
-    expect(page).to have_content("Welcome to Pauline's Chitter App")
+    expect(page).to have_content("Welcome to Pauline's Chitter App, Name")
   end
 
     # scenario 'will allow user to update their selected peep' do

@@ -22,8 +22,8 @@ feature "visit homepage" do
     fill_in :user_password, with: 'password'
     fill_in :user_password_confirmation, with: 'password'
     click_button 'Sign up'
-    expect(page).to have_content("Welcome to Pauline's Chitter App")
-    expect(page).to have_content('Here are your previously submitted peeps')
+    expect(page).to have_content("Welcome to Pauline's Chitter App, Name")
+    expect(page).to have_content('Here are all previously submitted peeps')
   end
 
   scenario 'will allow a signed-up user to log-in' do
@@ -38,7 +38,7 @@ feature "visit homepage" do
     fill_in :user_email, with: 'test@example.com'
     fill_in :user_password, with: 'password'
     click_button 'Log in'
-    expect(page).to have_content("Welcome to Pauline's Chitter App")
-    expect(page).to have_content('Here are your previously submitted peeps')
+    expect(page).to have_content("Welcome to Pauline's Chitter App, Name")
+    expect(page).to have_content('Here are all previously submitted peeps')
   end
 end

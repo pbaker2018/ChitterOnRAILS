@@ -1,6 +1,6 @@
 <div class="container">
   <div align="center">
-    <h1>Please update your peep:</h1>
+    <h1>Please update your peep, <%= current_user.user_name %>:</h1>
     <br/>
     <%= form_tag("/peeps/#{@peep.id}", method: "put") do %>
       <%= text_area_tag(:content, @peep.content, size: "60x10") %><br/>

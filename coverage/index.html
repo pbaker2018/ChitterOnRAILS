@@ -14,27 +14,27 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-01-24T16:12:00+00:00">2019-01-24T16:12:00+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-01-30T13:25:23+00:00">2019-01-30T13:25:23+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">96.89%</span></span>
+    (<span class="covered_percent"><span class="green">97.39%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.3
+         1.28
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>29</b> files in total.
-    <b>322</b> relevant lines. 
-    <span class="green"><b>312</b> lines covered</span> and
-    <span class="red"><b>10</b> lines missed </span>
+    <b>306</b> relevant lines. 
+    <span class="green"><b>298</b> lines covered</span> and
+    <span class="red"><b>8</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -57,17 +57,17 @@
         <td>6</td>
         <td>6</td>
         <td>0</td>
-        <td>9.0</td>
+        <td>8.5</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#51d03eba3cc0df8ebc207eb7613cd36dd049c3f3" class="src_link" title="app/controllers/peeps_controller.rb">app/controllers/peeps_controller.rb</a></td>
         <td class="red strong">73.91 %</td>
-        <td>46</td>
+        <td>42</td>
         <td>23</td>
         <td>17</td>
         <td>6</td>
-        <td>3.1</td>
+        <td>2.8</td>
       </tr>
       
       <tr>
@@ -272,11 +272,11 @@
       
       <tr>
         <td class="strong"><a href="#e181becfe4f2d6b8e080f3121778a1773124a89c" class="src_link" title="spec/features/visit_edit_spec.rb">spec/features/visit_edit_spec.rb</a></td>
-        <td class="green strong">96.3 %</td>
+        <td class="green strong">100.0 %</td>
         <td>61</td>
-        <td>54</td>
-        <td>52</td>
-        <td>2</td>
+        <td>38</td>
+        <td>38</td>
+        <td>0</td>
         <td>1.0</td>
       </tr>
       
@@ -430,8 +430,8 @@
           <code class="ruby">  def configure_permitted_parameters</code>
         </li>
       
-        <li class="covered" data-hits="49" data-linenumber="11">
-          <span class="hits">49</span>
+        <li class="covered" data-hits="46" data-linenumber="11">
+          <span class="hits">46</span>
           
           <code class="ruby">    devise_parameter_sanitizer.permit(:sign_up, keys: [:user_name])</code>
         </li>
@@ -509,8 +509,8 @@
           <code class="ruby">  def index</code>
         </li>
       
-        <li class="covered" data-hits="26" data-linenumber="7">
-          <span class="hits">26</span>
+        <li class="covered" data-hits="24" data-linenumber="7">
+          <span class="hits">24</span>
           
           <code class="ruby">    @peeps = Peep.all</code>
         </li>
@@ -533,14 +533,14 @@
           <code class="ruby">  def create</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="11">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="8" data-linenumber="11">
+          <span class="hits">8</span>
           
           <code class="ruby">    current_user.peeps.create(content: params[:content], name: params[:name])</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="12">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="8" data-linenumber="12">
+          <span class="hits">8</span>
           
           <code class="ruby">    redirect_to action: &#39;index&#39;</code>
         </li>
@@ -563,8 +563,8 @@
           <code class="ruby">  def show</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="16">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="6" data-linenumber="16">
+          <span class="hits">6</span>
           
           <code class="ruby">    @peep = Peep.find(params[:id])</code>
         </li>
@@ -587,163 +587,139 @@
           <code class="ruby">  def edit</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="20">
-          
-          
-          <code class="ruby">    # @peep = Peep.find(params[:id])</code>
-        </li>
-      
-        <li class="covered" data-hits="4" data-linenumber="21">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="3" data-linenumber="20">
+          <span class="hits">3</span>
           
           <code class="ruby">    @peep = current_user.peeps.find(params[:id])</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="22">
           
           
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="23">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="24">
+        <li class="covered" data-hits="1" data-linenumber="23">
           <span class="hits">1</span>
           
           <code class="ruby">  def update</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="25">
-          
-          
-          <code class="ruby">    # @peep = Peep.find(params[:id])</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="26">
-          
-          
-          <code class="ruby">    # if @peep.update(content: params[:content], name: params[:name])</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="27">
+        <li class="missed" data-hits="0" data-linenumber="24">
           
           
           <code class="ruby">    @peep = current_user.peeps.find(params[:id])</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="28">
+        <li class="missed" data-hits="0" data-linenumber="25">
           
           
           <code class="ruby">    if @peep.update(content: params[:content])</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="29">
+        <li class="missed" data-hits="0" data-linenumber="26">
           
           
           <code class="ruby">      flash[:notice] = &#39;Successfully updated peep!&#39;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="30">
+        <li class="missed" data-hits="0" data-linenumber="27">
           
           
           <code class="ruby">      redirect_to action: &#39;index&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="31">
+        <li class="never" data-hits="" data-linenumber="28">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="32">
+        <li class="never" data-hits="" data-linenumber="29">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="33">
+        <li class="never" data-hits="" data-linenumber="30">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="34">
+        <li class="covered" data-hits="1" data-linenumber="31">
           <span class="hits">1</span>
           
           <code class="ruby">  def destroy</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="35">
-          
-          
-          <code class="ruby">    # Peep.destroy(params[:id])</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="36">
+        <li class="covered" data-hits="1" data-linenumber="32">
           <span class="hits">1</span>
           
           <code class="ruby">    current_user.peeps.destroy(params[:id])</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="37">
+        <li class="covered" data-hits="1" data-linenumber="33">
           <span class="hits">1</span>
           
           <code class="ruby">    redirect_to action: &#39;index&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="38">
+        <li class="never" data-hits="" data-linenumber="34">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="39">
+        <li class="never" data-hits="" data-linenumber="35">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="40">
+        <li class="covered" data-hits="1" data-linenumber="36">
           <span class="hits">1</span>
           
           <code class="ruby">  def ensure_user</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="41">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="4" data-linenumber="37">
+          <span class="hits">4</span>
           
           <code class="ruby">    if Peep.find(params[:id]).user != current_user</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="42">
+        <li class="missed" data-hits="0" data-linenumber="38">
           
           
           <code class="ruby">      flash[:alert] = &quot;You can only update or delete your own peeps!&quot;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="43">
+        <li class="missed" data-hits="0" data-linenumber="39">
           
           
           <code class="ruby">      redirect_to peeps_url</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="44">
+        <li class="never" data-hits="" data-linenumber="40">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="45">
+        <li class="never" data-hits="" data-linenumber="41">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="46">
+        <li class="never" data-hits="" data-linenumber="42">
           
           
           <code class="ruby">end</code>
@@ -4275,11 +4251,11 @@
         <div class="source_table" id="e181becfe4f2d6b8e080f3121778a1773124a89c">
   <div class="header">
     <h3>spec/features/visit_edit_spec.rb</h3>
-    <h4><span class="green">96.3 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>54</b> relevant lines. 
-      <span class="green"><b>52</b> lines covered</span> and
-      <span class="red"><b>2</b> lines missed.</span>
+      <b>38</b> relevant lines. 
+      <span class="green"><b>38</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -4529,7 +4505,7 @@
         <li class="covered" data-hits="1" data-linenumber="41">
           <span class="hits">1</span>
           
-          <code class="ruby">    expect(page).to have_content(&quot;Welcome to Pauline&#39;s Chitter App&quot;)</code>
+          <code class="ruby">    expect(page).to have_content(&quot;Welcome to Pauline&#39;s Chitter App, Name&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="42">
@@ -4544,106 +4520,106 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="44">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="44">
           
-          <code class="ruby">    scenario &#39;will allow user to update their selected peep&#39; do</code>
+          
+          <code class="ruby">    # scenario &#39;will allow user to update their selected peep&#39; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="45">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="45">
           
-          <code class="ruby">      visit &#39;/&#39;</code>
+          
+          <code class="ruby">    #   visit &#39;/&#39;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="46">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="46">
           
-          <code class="ruby">      click_link(&#39;Sign up&#39;)</code>
+          
+          <code class="ruby">    #   click_link(&#39;Sign up&#39;)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="47">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="47">
           
-          <code class="ruby">      fill_in :user_email, with: &#39;test@example.com&#39;</code>
+          
+          <code class="ruby">    #   fill_in :user_email, with: &#39;test@example.com&#39;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="48">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="48">
           
-          <code class="ruby">      fill_in :user_user_name, with: &#39;Name&#39;</code>
+          
+          <code class="ruby">    #   fill_in :user_user_name, with: &#39;Name&#39;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="49">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="49">
           
-          <code class="ruby">      fill_in :user_password, with: &#39;password&#39;</code>
+          
+          <code class="ruby">    #   fill_in :user_password, with: &#39;password&#39;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="50">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="50">
           
-          <code class="ruby">      fill_in :user_password_confirmation, with: &#39;password&#39;</code>
+          
+          <code class="ruby">    #   fill_in :user_password_confirmation, with: &#39;password&#39;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="51">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="51">
           
-          <code class="ruby">      click_button &#39;Sign up&#39;</code>
+          
+          <code class="ruby">    #   click_button &#39;Sign up&#39;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="52">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="52">
           
-          <code class="ruby">      fill_in :content, with: &#39;Test Message!&#39;</code>
+          
+          <code class="ruby">    #   fill_in :content, with: &#39;Test Message!&#39;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="53">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="53">
           
-          <code class="ruby">      click_button &#39;Submit&#39;</code>
+          
+          <code class="ruby">    #   click_button &#39;Submit&#39;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="54">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="54">
           
-          <code class="ruby">      click_link(&#39;Test Message!&#39;)</code>
+          
+          <code class="ruby">    #   click_link(&#39;Test Message!&#39;)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="55">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="55">
           
-          <code class="ruby">      click_button &#39;Update Peep&#39;</code>
+          
+          <code class="ruby">    #   click_button &#39;Update Peep&#39;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="56">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="56">
           
-          <code class="ruby">      fill_in :content, with: &#39;UPDATED Test Message!&#39;</code>
+          
+          <code class="ruby">    #   fill_in :content, with: &#39;UPDATED Test Message!&#39;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="57">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="57">
           
-          <code class="ruby">      click_button &#39;Update Peep&#39;</code>
+          
+          <code class="ruby">    #   click_button &#39;Update Peep&#39;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="58">
+        <li class="never" data-hits="" data-linenumber="58">
           
           
-          <code class="ruby">      expect(page).to have_content(&quot;Welcome to Pauline&#39;s Chitter App&quot;)</code>
+          <code class="ruby">    #   expect(page).to have_content(&quot;Welcome to Pauline&#39;s Chitter App&quot;)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="59">
+        <li class="never" data-hits="" data-linenumber="59">
           
           
-          <code class="ruby">      expect(page).to have_content(&quot;UPDATED Test Message!&quot;)</code>
+          <code class="ruby">    #   expect(page).to have_content(&quot;UPDATED Test Message!&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="60">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby">    # end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="61">
@@ -4818,13 +4794,13 @@
         <li class="covered" data-hits="1" data-linenumber="25">
           <span class="hits">1</span>
           
-          <code class="ruby">    expect(page).to have_content(&quot;Welcome to Pauline&#39;s Chitter App&quot;)</code>
+          <code class="ruby">    expect(page).to have_content(&quot;Welcome to Pauline&#39;s Chitter App, Name&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="26">
           <span class="hits">1</span>
           
-          <code class="ruby">    expect(page).to have_content(&#39;Here are your previously submitted peeps&#39;)</code>
+          <code class="ruby">    expect(page).to have_content(&#39;Here are all previously submitted peeps&#39;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="27">
@@ -4914,13 +4890,13 @@
         <li class="covered" data-hits="1" data-linenumber="41">
           <span class="hits">1</span>
           
-          <code class="ruby">    expect(page).to have_content(&quot;Welcome to Pauline&#39;s Chitter App&quot;)</code>
+          <code class="ruby">    expect(page).to have_content(&quot;Welcome to Pauline&#39;s Chitter App, Name&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="42">
           <span class="hits">1</span>
           
-          <code class="ruby">    expect(page).to have_content(&#39;Here are your previously submitted peeps&#39;)</code>
+          <code class="ruby">    expect(page).to have_content(&#39;Here are all previously submitted peeps&#39;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="43">
@@ -5167,7 +5143,7 @@
         <li class="covered" data-hits="1" data-linenumber="36">
           <span class="hits">1</span>
           
-          <code class="ruby">    expect(page).to have_content(&#39;Please update your peep:&#39;)</code>
+          <code class="ruby">    expect(page).to have_content(&#39;Please update your peep&#39;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="37">
@@ -5269,7 +5245,7 @@
         <li class="covered" data-hits="1" data-linenumber="53">
           <span class="hits">1</span>
           
-          <code class="ruby">    expect(page).to have_content(&quot;Welcome to Pauline&#39;s Chitter App&quot;)</code>
+          <code class="ruby">    expect(page).to have_content(&quot;Welcome to Pauline&#39;s Chitter App, Name&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="54">

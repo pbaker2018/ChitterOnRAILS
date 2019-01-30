@@ -1,6 +1,6 @@
 <div class="container">
   <div align="center">
-    <h1>Welcome to Pauline's Chitter App 💌</h1>
+    <h1>Welcome to Pauline's Chitter App, <%= current_user.user_name %>💌</h1>
     <br/>
     <h3>⬇︎ Type a new 'peep' here ⬇︎</h3>
     <%= form_tag("/peeps", method: "post") do %>
@@ -9,7 +9,7 @@
     <%= submit_tag("Submit") %>
     <% end %><br/>
     <br/>
-    <h2>⬇︎ Here are your previously submitted peeps ⬇︎</h2>
+    <h2>⬇︎ Here are all previously submitted peeps ⬇︎</h2>
     <% @peeps.reverse.each do |peep| %>
     <div>
       <p><b>Created:</b> <%= peep.created_at.strftime("%d-%m-%Y %H:%M:%S") %> | <b>Posted by:</b> <%= peep.user.user_name %><br/>

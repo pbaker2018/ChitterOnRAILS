@@ -17,13 +17,10 @@ class PeepsController < ApplicationController
   end
 
   def edit
-    # @peep = Peep.find(params[:id])
     @peep = current_user.peeps.find(params[:id])
   end
 
   def update
-    # @peep = Peep.find(params[:id])
-    # if @peep.update(content: params[:content], name: params[:name])
     @peep = current_user.peeps.find(params[:id])
     if @peep.update(content: params[:content])
       flash[:notice] = 'Successfully updated peep!'
@@ -32,7 +29,6 @@ class PeepsController < ApplicationController
   end
 
   def destroy
-    # Peep.destroy(params[:id])
     current_user.peeps.destroy(params[:id])
     redirect_to action: 'index'
   end

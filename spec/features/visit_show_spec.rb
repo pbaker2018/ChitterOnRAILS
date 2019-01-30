@@ -33,7 +33,7 @@ feature 'visit user show page' do
     click_button 'Submit'
     click_link('My test message!')
     click_button 'Update Peep'
-    expect(page).to have_content('Please update your peep:')
+    expect(page).to have_content('Please update your peep')
     expect(page).to have_button('Update Peep')
     expect(page).to have_button('Homepage')
   end
@@ -50,7 +50,7 @@ feature 'visit user show page' do
     click_button 'Submit'
     click_link('My test message!')
     click_button 'Homepage'
-    expect(page).to have_content("Welcome to Pauline's Chitter App")
+    expect(page).to have_content("Welcome to Pauline's Chitter App, Name")
   end
 
   scenario 'will allow user to logout from the show page' do
