@@ -16,6 +16,11 @@ If they click on a previously submitted 'peep' they will be able to view the who
 
 There will also be 'sign-up', 'sign-in' and 'log-out' functionality, so that only the logged-in user can post messages as themselves.
 
+## Link to my Chitter App hosted on Heroku:
+Here, you can sign-up as a user and use my app to post messages. (Please keep them clean!!!)
+```
+https://young-brook-14168.herokuapp.com/
+```
 
 ## Youtube link to Screen Recording:
 This shows me using the Chitter App. I sign-up as three different users (Pauline, William and Rob), post peeps, and attempt to update/delete other users peeps.
