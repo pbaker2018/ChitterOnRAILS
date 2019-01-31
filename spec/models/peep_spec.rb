@@ -15,28 +15,10 @@ RSpec.describe Peep do
       expect(assc.macro).to eq :belongs_to
     end
   end
-  
+
   describe '#content' do
     it 'will display a user peep' do
       expect(subject.content).to eq 'foo'
     end
   end
-
-  # describe '#name' do
-  #   it 'will display the user name' do
-  #     expect(peep.name).to eq 'Viv'
-  #   end
-  # end
-
-  # describe '#created_at' do
-  #   it 'will display the time the peep was created' do
-  #     expect(subject.created_at).to eq Time.now
-  #   end
-  # end
-  #
-  # describe '#updated_at' do
-  #   it 'will display the time the peep was updated' do
-  #     expect(subject.updated_at).to eq Time.now
-  #   end
-  # end
 end

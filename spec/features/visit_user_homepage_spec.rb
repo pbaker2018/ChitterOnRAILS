@@ -15,7 +15,7 @@ feature 'visit user homepage' do
     expect(page).to have_button('Submit')
   end
 
-  scenario 'will display submitted message' do
+  scenario 'will display submitted peep' do
     visit '/'
     click_link('Sign up')
     fill_in :user_email, with: 'test@example.com'
@@ -30,7 +30,7 @@ feature 'visit user homepage' do
     expect(page).to have_content(Time.now.strftime('%d-%m-%Y %H:%M:%S'))
   end
 
-  scenario 'will delete submitted message' do
+  scenario 'will delete their own submitted peep' do
     visit '/'
     click_link('Sign up')
     fill_in :user_email, with: 'test@gmail.com'
@@ -43,6 +43,28 @@ feature 'visit user homepage' do
     click_button 'Delete Peep'
     expect(page).not_to have_content('Test Message!')
     expect(page).not_to have_content('Posted by: Name')
+  end
+
+  scenario 'will not allow user to delete someone elses peep' do
+    visit '/'
+    click_link('Sign up')
+    fill_in :user_email, with: 'test@example.com'
+    fill_in :user_user_name, with: 'Name'
+    fill_in :user_password, with: 'password'
+    fill_in :user_password_confirmation, with: 'password'
+    click_button 'Sign up'
+    fill_in :content, with: 'Test Message!'
+    click_button 'Submit'
+    click_link('Logout')
+    click_link('Sign up')
+    fill_in :user_email, with: 'test2@example.com'
+    fill_in :user_user_name, with: 'Name2'
+    fill_in :user_password, with: 'password'
+    fill_in :user_password_confirmation, with: 'password'
+    click_button 'Sign up'
+    click_button 'Delete Peep'
+    expect(page).to have_content("You can only update or delete your own peeps!")
+    expect(page).to have_content("Welcome to Pauline's Chitter App, Name2")
   end
 
   scenario 'will allow user to logout from the user homepage' do

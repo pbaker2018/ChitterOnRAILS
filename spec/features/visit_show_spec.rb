@@ -73,4 +73,50 @@ feature 'visit user show page' do
     expect(page).to have_content("Forgot your password?")
     expect(page).to have_button("Log in")
   end
+
+  scenario 'will not allow user to update someone elses peep' do
+    visit '/'
+    click_link('Sign up')
+    fill_in :user_email, with: 'test@example.com'
+    fill_in :user_user_name, with: 'Name'
+    fill_in :user_password, with: 'password'
+    fill_in :user_password_confirmation, with: 'password'
+    click_button 'Sign up'
+    fill_in :content, with: 'Test Message!'
+    click_button 'Submit'
+    click_link('Logout')
+    click_link('Sign up')
+    fill_in :user_email, with: 'test2@example.com'
+    fill_in :user_user_name, with: 'Name2'
+    fill_in :user_password, with: 'password'
+    fill_in :user_password_confirmation, with: 'password'
+    click_button 'Sign up'
+    click_link('Test Message!')
+    click_button 'Update Peep'
+    expect(page).to have_content("You can only update or delete your own peeps!")
+    expect(page).to have_content("Welcome to Pauline's Chitter App, Name2")
+  end
+
+  scenario 'will not allow user to delete someone elses peep' do
+    visit '/'
+    click_link('Sign up')
+    fill_in :user_email, with: 'test@example.com'
+    fill_in :user_user_name, with: 'Name'
+    fill_in :user_password, with: 'password'
+    fill_in :user_password_confirmation, with: 'password'
+    click_button 'Sign up'
+    fill_in :content, with: 'Test Message!'
+    click_button 'Submit'
+    click_link('Logout')
+    click_link('Sign up')
+    fill_in :user_email, with: 'test2@example.com'
+    fill_in :user_user_name, with: 'Name2'
+    fill_in :user_password, with: 'password'
+    fill_in :user_password_confirmation, with: 'password'
+    click_button 'Sign up'
+    click_link('Test Message!')
+    click_button 'Delete Peep'
+    expect(page).to have_content("You can only update or delete your own peeps!")
+    expect(page).to have_content("Welcome to Pauline's Chitter App, Name2")
+  end
 end
