@@ -17,6 +17,12 @@ If they click on a previously submitted 'peep' they will be able to view the who
 There will also be 'sign-up', 'sign-in' and 'log-out' functionality, so that only the logged-in user can post messages as themselves.
 
 
+## Youtube link to Screen Recording:
+This shows me using the Chitter App. I sign-up as three different users (Pauline, William and Rob), post peeps, and attempt to update/delete other users peeps.
+```
+https://youtu.be/LKd9Pafc7-Q
+```
+
 ## Below are the user stories:
 ```
 As a Maker
